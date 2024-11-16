@@ -1,5 +1,6 @@
 // Form Validation for Login Page
 function validateLoginForm(event) {
+    event.preventDefault();
     const email = document.querySelector('#email').value;
     const password = document.querySelector('#password').value;
     const emailError = document.querySelector('#email-error');
