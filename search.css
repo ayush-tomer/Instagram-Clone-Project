@@ -1,0 +1,291 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    margin-left: 220px; /* Space for navbar */
+}
+
+/* Left Navigation Bar */
+.navbar {
+    background-color: #ffffff;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    border-right: 1px solid #ddd;
+    padding-top: 20px;
+    text-align: center;
+    border-right: 1px solid;
+}
+
+.navbar a {
+    display: block;
+    padding: 10px 0;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Navbar Link Hover */
+.navbar a:hover {
+    background-color: #f1f1f1;
+    color: #0095f6;
+}
+
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-right: 320px; /* Space for right panel */
+    margin-left: 220px; /* Space for navbar */
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0095f6;
+    color: white;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0084b4;
+}
+
+/* Search Results */
+.search-results {
+    margin-top: 20px;
+}
+
+.search-results h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.result-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.result-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 20px;
+}
+
+.follow-btn {
+    padding: 6px 12px;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.follow-btn:hover {
+    background-color: #0084b4;
+}
+
+/* Right Panel: Follow Suggestions */
+.right-panel {
+    width: 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.right-panel h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.follow-suggestion {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.suggestion-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.follow-suggestion span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    flex-grow: 1;
+}
+
+.follow-suggestion button {
+    padding: 6px 12px;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.follow-suggestion button:hover {
+    background-color: #0084b4;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f8f8f8;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #555;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #0095f6;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #0084b4;
+}
+
+.footer p a {
+    margin: 0 10px;
+}
+
+/* Responsive Design */
+/* Tablet View (max-width 768px) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .search-bar {
+        width: 90%;
+    }
+
+    .right-panel {
+        width: 100%;
+        margin-top: 20px;
+        position: static;
+        height: auto;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}
+
+/* Mobile View (max-width 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-bar input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .result-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .result-name {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .right-panel {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}

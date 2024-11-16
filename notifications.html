@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone - Notifications</title>
+    <link rel="stylesheet" href="./notifications.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Navigation Bar -->
+        <div class="navbar">
+            <a href="home.html" class="logo"><img src="logo.png" alt="Logo"></a>
+            <a href="home.html">Home</a>
+            <a href="search.html">Search</a>
+            <a href="explore.html">Explore</a>
+            <a href="#">Reels</a>
+            <a href="messages.html">Messages</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="create.html">Create Post</a>
+            <a href="profile.html">Profile</a>
+            <a href="#">Threads</a>
+            <a href="#">More</a>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Notifications Header -->
+            <div class="notifications-header">
+                <h2>Notifications</h2>
+                <button class="mark-as-read-btn">Mark as Read</button>
+            </div>
+
+            <!-- Notification List -->
+            <div class="notification-list">
+                <!-- Notification Item 1 -->
+                <div class="notification-item unread">
+                    <img src="user1.jpg" alt="User" class="notification-avatar">
+                    <div class="notification-details">
+                        <span class="notification-username">John Doe</span>
+                        <span class="notification-text">liked your post.</span>
+                    </div>
+                    <span class="notification-time">5 minutes ago</span>
+                </div>
+
+                <!-- Notification Item 2 -->
+                <div class="notification-item unread">
+                    <img src="user2.jpg" alt="User" class="notification-avatar">
+                    <div class="notification-details">
+                        <span class="notification-username">Jane Smith</span>
+                        <span class="notification-text">commented: "Great photo!"</span>
+                    </div>
+                    <span class="notification-time">2 hours ago</span>
+                </div>
+
+                <!-- Notification Item 3 -->
+                <div class="notification-item read">
+                    <img src="user3.jpg" alt="User" class="notification-avatar">
+                    <div class="notification-details">
+                        <span class="notification-username">Alice Johnson</span>
+                        <span class="notification-text">started following you.</span>
+                    </div>
+                    <span class="notification-time">1 day ago</span>
+                </div>
+                <!-- Add more notifications as needed -->
+            </div>
+
+            <!-- Right Panel: Follow Suggestions -->
+            <div class="right-panel">
+                <h3>Suggestions for You</h3>
+                <div class="follow-suggestion">
+                    <img src="suggested-user1.jpg" alt="Suggested User">
+                    <span>John Doe</span>
+                    <button data-user="user1">Follow</button>
+                </div>
+                <div class="follow-suggestion">
+                    <img src="suggested-user2.jpg" alt="Suggested User">
+                    <span>Jane Smith</span>
+                    <button data-user="user2">Follow</button>
+                </div>
+                <div class="follow-suggestion">
+                    <img src="suggested-user3.jpg" alt="Suggested User">
+                    <span>Jane Smith</span>
+                    <button data-user="user3">Follow</button>
+                </div>
+                <!-- Add more suggestions as needed -->
+
+                <!-- Footer -->
+                <div class="footer">
+                    <div class="footer-content">
+                        <p>&copy; 2024 Instagram Clone. All Rights Reserved.</p>
+                        <p><a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a> | <a href="#">Help</a> | <a href="#">Contact Us</a></p>
+                        <p>Created By Ayush Tomer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="notifications.js"></script>
+</body>
+</html>

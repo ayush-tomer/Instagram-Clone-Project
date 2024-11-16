@@ -1,0 +1,277 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: flex-start;
+    min-height: 100vh; /* Add space for the navbar */
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    margin-left: 220px; /* Space for the left navbar */
+}
+
+/* Left Navigation Bar */
+.navbar {
+    background-color: #ffffff;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh; /* Full height of the screen */
+    border-right: 1px solid #ddd;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.navbar a {
+    display: block;
+    padding: 10px 0;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for all navbar links */
+.navbar a:hover {
+    background-color: #f1f1f1;
+    color: #0095f6;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+    margin-right: 320px; /* Space for the right panel */
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Create Post Form */
+.post-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* File Input for Image */
+.file-label {
+    background-color: #0095f6;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.file-label:hover {
+    background-color: #0084b4;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Textarea for Caption */
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    resize: vertical;
+}
+
+/* Location Input */
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Post Button */
+.post-btn {
+    background-color: #0095f6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.post-btn:hover {
+    background-color: #0084b4;
+}
+
+/* Right Panel: Follow Suggestions */
+.right-panel {
+    width: 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.right-panel h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.follow-suggestion {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.follow-suggestion img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.follow-suggestion span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    flex-grow: 1;
+}
+
+.follow-suggestion button {
+    padding: 6px 12px;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.follow-suggestion button:hover {
+    background-color: #0084b4;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f8f8f8;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #555;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #0095f6;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #0084b4;
+}
+
+.footer p a {
+    margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .right-panel {
+        width: 100%;
+        margin-top: 20px;
+        position: static;
+        height: auto;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .right-panel {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .post-content {
+        gap: 10px;
+    }
+
+    .file-label {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    textarea,
+    input[type="text"] {
+        font-size: 14px;
+    }
+
+    .post-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .follow-suggestion {
+        font-size: 14px;
+    }
+}

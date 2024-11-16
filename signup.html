@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone - Sign Up</title>
+    <link rel="stylesheet" href="./signup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="signup-container">
+            <img src="assets/images/logo.png" alt="Logo" class="logo">
+            <form id="signup-form" method="POST">
+                <input type="text" id="username" placeholder="Username" required>
+                <div id="username-error" class="error"></div>
+                <input type="email" id="email" placeholder="Email" required>
+                <div id="email-error" class="error"></div>
+                <input type="password" id="password" placeholder="Password" required>
+                <div id="password-error" class="error"></div>
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                <div id="confirm-password-error" class="error"></div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="additional-links">
+                Already have an account?<a href="index.html">Log In</a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Instagram Clone. All Rights Reserved.</p>
+            <p><a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a> | <a href="#">Help</a> | <a href="#">Contact Us</a></p>
+            <p>Created By Ayush Tomer.</p>
+        </div>
+    </footer>
+    <script src="signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone - Messages</title>
+    <link rel="stylesheet" href="./messages.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Navigation Bar -->
+        <div class="navbar">
+            <a href="home.html" class="logo"><img src="logo.png" alt="Logo"></a>
+            <a href="home.html">Home</a>
+            <a href="search.html">Search</a>
+            <a href="explore.html">Explore</a>
+            <a href="#">Reels</a>
+            <a href="messages.html" class="active">Messages</a>
+            <a href="notifications.html">Notifications</a>
+            <a href="create.html">Create Post</a>
+            <a href="profile.html">Profile</a>
+            <a href="#">Threads</a>
+            <a href="#">More</a>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Messages Header -->
+            <div class="messages-header">
+                <h2>Messages</h2>
+                <button class="new-message-btn">New Message</button>
+            </div>
+
+            <!-- Message List -->
+            <div class="message-list">
+                <!-- Message Item 1 -->
+                <div class="message-item">
+                    <img src="user1.jpg" alt="User" class="message-avatar">
+                    <div class="message-details">
+                        <span class="message-username">John Doe</span>
+                        <span class="message-preview">Hey, how are you?</span>
+                    </div>
+                    <span class="message-time">10 minutes ago</span>
+                </div>
+
+                <!-- Message Item 2 -->
+                <div class="message-item">
+                    <img src="user2.jpg" alt="User" class="message-avatar">
+                    <div class="message-details">
+                        <span class="message-username">Jane Smith</span>
+                        <span class="message-preview">Let’s catch up tomorrow!</span>
+                    </div>
+                    <span class="message-time">2 hours ago</span>
+                </div>
+
+                <!-- Message Item 3 -->
+                <div class="message-item">
+                    <img src="user3.jpg" alt="User" class="message-avatar">
+                    <div class="message-details">
+                        <span class="message-username">Alice Johnson</span>
+                        <span class="message-preview">Check out this cool link!</span>
+                    </div>
+                    <span class="message-time">1 day ago</span>
+                </div>
+                <!-- Add more messages as needed -->
+            </div>
+
+            <!-- Right Panel: Follow Suggestions -->
+            <div class="right-panel">
+                <h3>Suggestions for You</h3>
+                <div class="follow-suggestion">
+                    <img src="suggested-user1.jpg" alt="Suggested User">
+                    <span>John Doe</span>
+                    <button data-user="user1">Follow</button>
+                </div>
+                <div class="follow-suggestion">
+                    <img src="suggested-user2.jpg" alt="Suggested User">
+                    <span>Jane Smith</span>
+                    <button data-user="user2">Follow</button>
+                </div>
+                <div class="follow-suggestion">
+                    <img src="suggested-user3.jpg" alt="Suggested User">
+                    <span>Jane Smith</span>
+                    <button data-user="user3">Follow</button>
+                </div>
+                <!-- Add more suggestions as needed -->
+
+                <!-- Footer -->
+                <div class="footer">
+                    <div class="footer-content">
+                        <p>&copy; 2024 Instagram Clone. All Rights Reserved.</p>
+                        <p><a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a> | <a href="#">Help</a> | <a href="#">Contact Us</a></p>
+                        <p>Created By Ayush Tomer.</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script src="messages.js"></script>
+</body>
+</html>

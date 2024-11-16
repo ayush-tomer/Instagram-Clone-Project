@@ -1,0 +1,200 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Container and Flexbox Centering */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Logo Styling */
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+/* Input Fields Styling */
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #0095f6;
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0084b4;
+}
+
+/* Additional Links */
+.additional-links {
+    margin-top: 20px;
+}
+
+.additional-links a {
+    display: block;
+    text-decoration: none;
+    color: #0095f6;
+    margin: 5px 0;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.additional-links a:hover {
+    color: #0084b4;
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #555;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #0095f6;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #0084b4;
+}
+
+.footer p a {
+    margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .logo {
+        width: 80px;
+        margin-bottom: 15px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+
+    .footer a {
+        font-size: 12px;
+    }
+
+    .footer-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+    .login-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    input, button {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+
+    .footer a {
+        font-size: 12px;
+    }
+}
+
+/* Button Hover Effects */
+button:hover {
+    background-color: #0084b4;
+    transition: background-color 0.3s ease;
+}
+
+/* Input Field Focus Effect */
+input:focus {
+    border-color: #0095f6;
+    outline: none;
+}
