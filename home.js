@@ -78,20 +78,3 @@ commentButtons.forEach(button => {
         addComment(postId);
     });
 });
-
-// Optional: Auto-scroll the stories horizontally
-const storyContainer = document.querySelector('.story-container');
-let scrollPosition = 0;
-const scrollSpeed = 1; // Change speed here (higher value = faster scroll)
-
-// Function to scroll the story container
-function scrollStories() {
-    scrollPosition += scrollSpeed;
-    if (scrollPosition >= storyContainer.scrollWidth - storyContainer.clientWidth) {
-        scrollPosition = 0;
-    }
-    storyContainer.scrollLeft = scrollPosition;
-}
-
-// Scroll stories every 20ms (smooth scrolling effect)
-setInterval(scrollStories, 20);

@@ -1,63 +1,85 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Search Functionality
-    const searchInput = document.querySelector(".search-bar input");
+    // Elements Selection
+    const searchInput = document.querySelector("#search-input");
     const searchResults = document.querySelector(".search-results");
 
-    // Listen for input changes to dynamically update results
+    // Mock Data for Search Results
+    const searchMockData = [
+        { id: 1, name: "Chris Evans", avatar: "./ASSETS/IMAGES/user4.jpg" },
+        { id: 2, name: "Emma Watson", avatar: "./ASSETS/IMAGES/user5.jpg" },
+        { id: 3, name: "Robert Downey", avatar: "./ASSETS/IMAGES/user6.jpg" },
+    ];
+
+    // Search Functionality
     searchInput.addEventListener("input", () => {
         const query = searchInput.value.trim();
         if (query) {
             displaySearchResults(query);
         } else {
-            searchResults.innerHTML = ""; // Clear results when input is empty
+            searchResults.innerHTML = ""; // Clear results if input is empty
         }
     });
 
+    // Display Search Results
     function displaySearchResults(query) {
-        // Placeholder for dynamic search results logic
-        const mockData = [
-            { name: "John Doe", avatar: "user1.jpg" },
-            { name: "Jane Smith", avatar: "user2.jpg" },
-            { name: "Alex Johnson", avatar: "user3.jpg" },
-        ];
-
-        // Filter mock data based on query
-        const results = mockData.filter((user) =>
+        const filteredResults = searchMockData.filter((user) =>
             user.name.toLowerCase().includes(query.toLowerCase())
         );
 
-        if (results.length > 0) {
-            searchResults.innerHTML = results
+        if (filteredResults.length > 0) {
+            searchResults.innerHTML = filteredResults
                 .map(
                     (user) => `
                 <div class="result-item">
                     <img src="${user.avatar}" alt="${user.name}" class="result-avatar">
                     <span class="result-name">${user.name}</span>
-                    <button class="follow-btn">Follow</button>
+                    <button class="follow-btn" data-user="${user.id}">Follow</button>
                 </div>
             `
                 )
                 .join("");
 
-            // Attach follow button functionality
-            const followButtons = document.querySelectorAll(".follow-btn");
-            followButtons.forEach((button) => {
-                button.addEventListener("click", handleFollow);
-            });
+            attachFollowListeners(".search-results .follow-btn");
         } else {
             searchResults.innerHTML = `<p>No results found for "${query}".</p>`;
         }
     }
 
-    // Follow Button Functionality
-    function handleFollow(event) {
-        const button = event.target;
+    function toggleFollowsearch(button) {
         if (button.textContent === "Follow") {
             button.textContent = "Following";
-            button.style.backgroundColor = "#ccc";
+            button.style.backgroundColor = "#ccc"; // Gray for following
         } else {
             button.textContent = "Follow";
-            button.style.backgroundColor = "#0095f6";
+            button.style.backgroundColor = "#0095f6"; // Blue for follow
         }
     }
+
+    function attachFollowListeners(selector) {
+        document.querySelectorAll(selector).forEach((button) => {
+            button.addEventListener("click", () => toggleFollowsearch(button));
+        });
+    }
+
+    // Function to handle follow button click
+    function toggleFollow(userId) {
+        const followButton = document.querySelector(`.follow-suggestion button[data-user="${userId}"]`);
+        
+        if (followButton.textContent === 'Follow') {
+            followButton.textContent = 'Following';
+            followButton.style.backgroundColor = '#ccc'; // Gray for following
+        } else {
+            followButton.textContent = 'Follow';
+            followButton.style.backgroundColor = '#0095f6'; // Blue for follow
+        }
+    }
+
+    // Attach event listeners to follow buttons
+    const followButtons = document.querySelectorAll('.follow-suggestion button');
+    followButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const userId = event.target.getAttribute('data-user');
+            toggleFollow(userId);
+        });
+    });
 });
