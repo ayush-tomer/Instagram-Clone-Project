@@ -1,9 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // New Message Button functionality
     const newMessageBtn = document.querySelector('.new-message-btn');
-    
-    // Create New Message Modal
     const createNewMessageModal = () => {
         const modal = document.createElement('div');
         modal.classList.add('modal');
@@ -19,14 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
         document.body.appendChild(modal);
-
-        // Cancel Button closes modal
         const cancelBtn = modal.querySelector('.cancel-btn');
         cancelBtn.addEventListener('click', () => {
             modal.remove();
         });
-
-        // Send Button sends message
         const sendBtn = modal.querySelector('.send-btn');
         sendBtn.addEventListener('click', () => {
             const recipient = document.getElementById('message-recipient').value;
@@ -40,13 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     };
-
-    // New Message button event
     newMessageBtn.addEventListener('click', createNewMessageModal);
-
-    // Follow Button functionality
     const followButtons = document.querySelectorAll('.follow-suggestion button');
-    
     followButtons.forEach(button => {
         button.addEventListener('click', () => {
             if (button.textContent === 'Follow') {
@@ -58,18 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Mark message as read when clicked
     const messageItems = document.querySelectorAll('.message-item');
-    
     messageItems.forEach(item => {
         item.addEventListener('click', () => {
             item.classList.toggle('read');
             const messageTime = item.querySelector('.message-time');
             if (item.classList.contains('read')) {
-                messageTime.style.color = '#888'; // Change time color to indicate read status
+                messageTime.style.color = '#888';
             } else {
-                messageTime.style.color = '#bbb'; // Default unread time color
+                messageTime.style.color = '#bbb';
             }
         });
     });

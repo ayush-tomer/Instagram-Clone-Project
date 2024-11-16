@@ -1,28 +1,22 @@
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Arial', sans-serif;
     background-color: #fafafa;
     display: flex;
     justify-content: flex-start;
-    min-height: 100vh; /* Spacing for fixed elements */
+    min-height: 100vh;
 }
-
-/* Container Layout */
 .container {
     display: flex;
     justify-content: space-between;
     width: 100%;
     gap: 20px;
-    margin-left: 220px; /* Space for fixed navbar */
+    margin-left: 220px;
 }
-
-/* Navbar */
 .navbar {
     background-color: #ffffff;
     width: 200px;
@@ -36,7 +30,6 @@ body {
     text-align: center;
     overflow-y: auto;
 }
-
 .navbar a {
     display: block;
     padding: 10px 15px;
@@ -45,38 +38,31 @@ body {
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .logo {
     width: 100px;
     margin-bottom: 20px;
 }
-
 .navbar a:hover {
     background-color: #f1f1f1;
     color: #0095f6;
 }
-
-/* Profile Content Area */
 .profile-content {
     flex: 1;
     padding: 20px;
     width: 100%;
-    margin-right: 320px; /* Create space for the right panel */
+    margin-right: 320px;
 }
-
 .profile-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
-
 .profile-info {
     display: flex;
     gap: 20px;
     align-items: center;
 }
-
 .profile-img {
     width: 100px;
     height: 100px;
@@ -84,34 +70,28 @@ body {
     object-fit: cover;
     border: 2px solid #ddd;
 }
-
 .profile-details h2 {
     font-size: 24px;
     color: #333;
 }
-
 .profile-details .username {
     font-size: 18px;
     color: #555;
 }
-
 .profile-details .bio {
     font-size: 14px;
     color: #777;
     margin-top: 8px;
 }
-
 .stats {
     display: flex;
     gap: 20px;
     margin-top: 12px;
 }
-
 .stats span {
     font-size: 14px;
     color: #333;
 }
-
 .edit-btn {
     padding: 8px 16px;
     background-color: #0095f6;
@@ -121,25 +101,20 @@ body {
     cursor: pointer;
     font-size: 14px;
 }
-
 .edit-btn:hover {
     background-color: #0084b4;
 }
-
 .post-feed h3 {
     font-size: 22px;
     color: #333;
     margin-top: 30px;
 }
-
 .post-feed div {
     height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-/* Post Card */
 .post {
     background-color: #fff;
     border-radius: 10px;
@@ -148,14 +123,11 @@ body {
     padding: 15px;
     width: 100%;
 }
-
 .post img {
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
 }
-
-/* Footer */
 .footer {
     background-color: #f8f8f8;
     width: 100%;
@@ -163,128 +135,100 @@ body {
     text-align: center;
     margin-top: 30px;
     position: relative;
-    margin-top: auto; /* Ensures the footer sticks at the bottom */
+    margin-top: auto;
     flex-shrink: 0;
 }
-
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .footer p {
     font-size: 14px;
     color: #555;
 }
-
 .footer a {
     text-decoration: none;
     color: #0095f6;
     font-size: 14px;
     transition: color 0.3s ease;
 }
-
 .footer a:hover {
     color: #0084b4;
 }
-
 .footer p a {
     margin: 0 10px;
 }
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
         padding: 10px;
     }
-
     .profile-content {
         padding: 10px;
     }
-
     .footer {
         padding: 10px;
     }
-
     .profile-img {
         width: 70px;
         height: 70px;
     }
-
     .profile-details h2 {
         font-size: 18px;
     }
-
     .profile-details .username {
         font-size: 14px;
     }
-
     .profile-details .bio {
         font-size: 10px;
     }
-
     .stats {
         flex-direction: column;
         gap: 8px;
     }
-
     .stats span {
         font-size: 12px;
     }
-
     .post {
         padding: 8px;
     }
 }
-
 @media (max-width: 480px) {
     .navbar {
         padding: 8px;
     }
-
     .profile-content {
         padding: 8px;
     }
-
     .footer {
         padding: 8px;
     }
-
     .profile-img {
         width: 60px;
         height: 60px;
     }
-
     .profile-details h2 {
         font-size: 16px;
     }
-
     .profile-details .username {
         font-size: 12px;
     }
-
     .profile-details .bio {
         font-size: 10px;
     }
-
     .stats {
         flex-direction: column;
         gap: 6px;
     }
-
     .stats span {
         font-size: 10px;
     }
-
     .edit-btn {
         padding: 6px 10px;
         font-size: 10px;
     }
-
     .post {
         padding: 6px;
     }
-
     .footer p {
         font-size: 12px;
     }

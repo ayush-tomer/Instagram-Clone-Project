@@ -1,6 +1,4 @@
-// Wait for the DOM to fully load
 document.addEventListener("DOMContentLoaded", function() {
-    // Mark all notifications as read when the button is clicked
     const markAsReadButton = document.querySelector('.mark-as-read-btn');
     markAsReadButton.addEventListener('click', function() {
         const unreadNotifications = document.querySelectorAll('.notification-item.unread');
@@ -9,10 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
             notification.classList.add('read');
         });
     });
-
-    // Follow Button functionality
     const followButtons = document.querySelectorAll('.follow-suggestion button');
-    
     followButtons.forEach(button => {
         button.addEventListener('click', () => {
             if (button.textContent === 'Follow') {

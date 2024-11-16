@@ -1,9 +1,6 @@
-// Select DOM elements
 const exploreGrid = document.querySelector('.explore-grid');
 const loadingMessage = document.querySelector('.loading-message');
 const followButtons = document.querySelectorAll('.follow-suggestion button');
-
-// Simulated content data (replace this with real data from a server/API)
 const exploreItems = [
     { id: 1, imgSrc: './ASSETS/IMAGES/explore1.jpg', caption: 'Beautiful Sunset' },
     { id: 2, imgSrc: './ASSETS/IMAGES/explore2.jpg', caption: 'City Lights' },
@@ -15,10 +12,7 @@ const exploreItems = [
     { id: 8, imgSrc: './ASSETS/IMAGES/explore8.jpg', caption: 'Starry Night' },
     { id: 9, imgSrc: './ASSETS/IMAGES/explore9.jpg', caption: 'Misty Forest' },
     { id: 10, imgSrc: './ASSETS/IMAGES/explore10.jpg', caption: 'Snowy Peaks' },
-    // Add more items as needed
 ];
-
-// Function to create and append explore items dynamically
 function renderExploreItems(items) {
     items.forEach(item => {
         const exploreItem = document.createElement('div');
@@ -32,32 +26,22 @@ function renderExploreItems(items) {
         exploreGrid.appendChild(exploreItem);
     });
 }
-
-// Initial render of explore items
-renderExploreItems(exploreItems.slice(0, 10)); // Load first 6 items initially
-
-// Infinite scrolling simulation
+renderExploreItems(exploreItems.slice(0, 10));
 let loading = false;
 window.addEventListener('scroll', () => {
     if (loading) return;
-
-    // Check if the user has scrolled near the bottom
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
     if (scrollTop + clientHeight >= scrollHeight - 50) {
         loading = true;
         loadingMessage.style.display = 'block';
-
-        // Simulate loading new content (e.g., from an API)
         setTimeout(() => {
-            const moreItems = exploreItems; // Replace this with actual API call
-            renderExploreItems(moreItems.slice(0, 10)); // Load next 6 items
+            const moreItems = exploreItems;
+            renderExploreItems(moreItems.slice(0, 10));
             loadingMessage.style.display = 'none';
             loading = false;
-        }, 1500); // Simulate a 1.5s loading time
+        }, 1500);
     }
 });
-
-// Follow button interactivity
 followButtons.forEach(button => {
     button.addEventListener('click', () => {
         const userId = button.getAttribute('data-user');
