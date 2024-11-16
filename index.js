@@ -23,8 +23,8 @@ function validateLoginForm(event) {
         valid = false;
     }
 
-    if (!valid) {
-        event.preventDefault();
+    if (valid) {
+        window.location.href = "home.html";
     }
 }
 
