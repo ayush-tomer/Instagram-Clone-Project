@@ -45,6 +45,11 @@ body {
     transition: background-color 0.3s ease;
 }
 
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
 /* Hover effect for all navbar links */
 .navbar a:hover {
     background-color: #f1f1f1;
