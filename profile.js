@@ -32,21 +32,6 @@ editButton.addEventListener('click', function () {
         editForm.remove();
     });
 });
-function toggleFollow() {
-    isFollowing = !isFollowing;
-    if (isFollowing) {
-        followersElement.textContent = `${parseInt(followersElement.textContent.split(' ')[0]) + 1} Followers`;
-        followButton.textContent = 'Unfollow';
-        followButton.style.backgroundColor = '#ff5e57';
-    } else {
-        followersElement.textContent = `${parseInt(followersElement.textContent.split(' ')[0]) - 1} Followers`;
-        followButton.textContent = 'Follow';
-        followButton.style.backgroundColor = '#0095f6';
-    }
-}
-if (followButton) {
-    followButton.addEventListener('click', toggleFollow);
-}
 function displayPosts() {
     if (posts.length === 0) {
         postFeed.innerHTML = `
